@@ -1,0 +1,50 @@
+func fib
+. n
+= n, $0
+. curr
+. next
+. i
+= curr, 0
+= next, 1
+. _temp0
+== _temp0, n, 0
+! _temp0, _temp0
+?:= _label0, _temp0
+ret 0
+: _label0
+. _temp1
+== _temp1, n, 1
+! _temp1, _temp1
+?:= _label1, _temp1
+ret 1
+: _label1
+= i, n
+. temp
+. one
+= one, 1
+: _label2
+= temp, next
+. _temp2
++ _temp2, curr, next
+= next, _temp2
+= curr, temp
+. _temp3
+- _temp3, i, one
+= i, _temp3
+. _temp4
+> _temp4, i, one
+?:= _label2, _temp4
+ret next
+endfunc
+func main
+. num
+.< num
+. ans
+. _temp5
+= _temp5, num
+param _temp5
+. _temp6
+call fib, _temp6
+= ans, _temp6
+.> ans
+endfunc

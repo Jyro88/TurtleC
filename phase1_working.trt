@@ -1,0 +1,42 @@
+
+tInt num ;
+num is 2;
+tInt num  is  15;
+
+tInt_array numArray;
+tInt_array numArray is [];
+numArray is [109,10];
+
+read("abc.txt");
+
+if (a) 
+%
+    {}[]()
+%
+
+if 
+(b) %
+aklmv;oifbj;
+%
+
+if (c) %% else (c) %hi%
+
+if () %% elif() %% elif() %% else()%%
+
+~ this is a single line comment
+
+\~ this is a
+multi line comment ~\
+
+functionName : [tInt number, tString name] -> tInt
+
+
+/lt
+/eq
+/gt
+/neq
+
+while this : () {}
+
+
+terminate;

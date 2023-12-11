@@ -1,0 +1,16 @@
+func main
+.[] nums, 10
+. index8
+. elementAtIndex8
+= index8, 7
+[]= nums, index8, 5
+. _temp0
+=[] _temp0, nums, 7
+= elementAtIndex8, _temp0
+.> elementAtIndex8
+[]= nums, 7, 6
+. _temp1
+=[] _temp1, nums, index8
+= elementAtIndex8, _temp1
+.> elementAtIndex8
+endfunc

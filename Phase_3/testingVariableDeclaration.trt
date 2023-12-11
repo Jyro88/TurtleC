@@ -1,0 +1,9 @@
+main : [] {
+    
+   tInt a
+   tInt b
+   tInt c
+
+
+   write(a)
+}

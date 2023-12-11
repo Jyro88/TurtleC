@@ -1,0 +1,50 @@
+fib : [n] {
+    
+
+
+
+    tInt curr
+    tInt next
+    tInt i
+
+    curr is 0
+    next is 1
+
+    if (n /eq 0) {
+        output 0
+    }
+
+    if (n /eq 1) {
+        output 1
+    }
+
+    i is n
+
+    tInt temp
+
+   tInt one
+   one is 1
+
+   while this: (i /gt one) {
+
+        temp is next
+        next is curr /p next
+        curr is temp
+
+        i is i /m one
+   }
+    
+
+
+
+    output next
+}
+
+main : [] {
+    tInt num
+    read(num)
+
+    tInt ans
+    ans is /RAYYANCALL fib(num)
+    write(ans)
+}

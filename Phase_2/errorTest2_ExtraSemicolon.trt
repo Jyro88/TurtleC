@@ -1,0 +1,6 @@
+sum : [tInt sum] -> tInt {
+
+
+    arrayOf_5 num;;
+
+}

@@ -1,0 +1,40 @@
+func main
+. a
+. b
+. c
+. d
+. e
+. f
+= a, 0
+= b, 5
+= c, 0
+= d, 2
+= e, 2
+= f, 4
+: _label0
+: _label1
+.> c
+. _temp0
++ _temp0, c, 1
+= c, _temp0
+. _temp1
+< _temp1, c, d
+?:= _label1, _temp1
+: _label2
+.> e
+. _temp2
++ _temp2, e, 1
+= e, _temp2
+. _temp3
+< _temp3, e, f
+?:= _label2, _temp3
+. _temp4
++ _temp4, a, 1
+= a, _temp4
+= c, 0
+= e, 2
+. _temp5
+< _temp5, a, b
+?:= _label0, _temp5
+.> a
+endfunc

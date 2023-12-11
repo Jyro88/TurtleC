@@ -1,0 +1,22 @@
+sum : [p1, p2, p3] {
+    
+    tInt a
+    
+    a is p1 /p p2 /p p3
+    output a
+}
+
+main : [] {
+    tInt a
+    read (a)
+
+    tInt b
+    read (b)
+
+    tInt c
+    read (c)
+    tInt d
+    d is (/RAYYANCALL sum(a,b,c))
+    write (d)
+    write (a)
+}

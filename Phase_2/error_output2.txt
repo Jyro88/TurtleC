@@ -1,0 +1,5 @@
+array_declaration ->  INTEGER_ARRAY_DATATYPE NUM IDENTIFIER SEMICOLON
+statement -> array_declaration
+statements -> epsilon
+statements -> statement statements
+Error: On line 4, column 12: syntax error, unexpected SEMICOLON, expecting R_CURLY 

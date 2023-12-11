@@ -1,0 +1,24 @@
+func main
+. a
+. b
+. c
+= a, 1
+= b, 2
+= c, 3
+. _temp0
+== _temp0, a, 2
+! _temp0, _temp0
+?:= _label0, _temp0
+.> a
+:= _label1
+: _label0
+. _temp1
+== _temp1, b, 2
+! _temp1, _temp1
+?:= _label2, _temp1
+.> b
+:= _label1
+: _label2
+.> c
+: _label1
+endfunc

@@ -1,0 +1,35 @@
+main : [] {
+    tInt a
+    tInt b
+
+    tInt c
+    tInt d
+
+    tInt e
+    tInt f
+
+    a is 0
+    b is 5
+
+    c is 0
+    d is 2
+
+    e is 2
+    f is 4
+
+    while this: (a /lt b){
+        while this: (c /lt d) {
+            write(c)
+            c is c /p 1
+        }
+        while this: (e /lt f) {
+            write(e)
+            e is e /p 1
+        }
+        a is a /p 1
+        c is 0
+        e is 2
+    }
+
+    write(a)
+}

@@ -1,0 +1,28 @@
+sum : [tInt sum] -> tInt {
+    (3 /p 4 /m (3 /m 3))
+    Readfile is read (something)
+    write(something, here)
+    terminate;
+    tInt num is 5;
+    num is 5;
+    tInt num is (5/p3) /d 2;
+    arrayOf_5 num;
+
+    if (a /lt b) {
+        if (a /lt b) {
+            tInt num is (5/p3) /d 2;
+            arrayOf_5 num; 
+        }
+        tInt num is (5/p3) /d 2;
+        arrayOf_5 num; 
+    }
+
+    if (a /lt b) {
+       tInt num is (5/p3) /d 2;
+        arrayOf_5 num; 
+    }
+
+    ~Comment
+
+    arrayOf_5 num;
+}

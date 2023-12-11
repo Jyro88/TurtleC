@@ -1,0 +1,74 @@
+
+bubSort : [n] {
+
+    tInt arrayOf_ 5 a
+    a[0] is 3
+    a[1] is 6
+    a[2] is 1
+    a[3] is 3
+    a[4] is 0
+
+    tInt i
+    tInt j
+
+    tInt swapped
+    tInt temp
+
+    i is 0
+
+
+    tInt nMinus1
+    nMinus1 is n /m 1
+
+    while this: (i /lt nMinus1) {
+        swapped is 0
+        j is 0
+
+        tInt nMinusIMinus1
+        nMinusIMinus1 is n /m i /m 1
+
+        while this: (j /lt nMinusIMinus1) {
+            tInt arrayAtJ 
+            arrayAtJ is a[j]
+
+            tInt arrayAtJPlus1
+            tInt jPlus1
+            jPlus1 is j /p 1
+            arrayAtJPlus1 is a[jPlus1]
+
+            if(arrayAtJ /gt arrayAtJPlus1) {
+                temp is a[j]
+                a[j] is a[jPlus1]
+                a[jPlus1] is temp
+                swapped is 1
+            }
+
+            j is j /p 1
+        }
+
+
+        i is i /p 1
+    }
+
+    i is 0
+
+    while this: (i /lt n) {
+        tInt eachElement
+        eachElement is a[i]
+
+        write(eachElement)
+        i is i /p 1
+    }
+
+    output 0
+
+}
+main : [] {
+    
+
+    tInt n 
+    n is 5
+    
+    /RAYYANCALL bubSort(n)
+    
+}

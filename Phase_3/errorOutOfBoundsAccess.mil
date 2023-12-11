@@ -1,0 +1,8 @@
+func main
+.[] nums, 10
+. index10
+. _temp0
+=[] _temp0, nums, 10
+= index10, _temp0
+.> index10
+endfunc

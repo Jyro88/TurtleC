@@ -1,0 +1,8 @@
+# flex test.lex 
+# gcc lex.yy.c -o int_variable -ll
+# ./int_variable 
+
+# QOL multiline
+# flex william.lex && gcc lex.yy.c -o int_variable -ll && ./int_variable
+
+flex main.lex && gcc lex.yy.c -o phase1  -ll && ./phase1 phase1.trt

@@ -1,0 +1,79 @@
+variable_declaration -> INTEGER_DATATYPE IDENTIFIER SEMICOLON
+statement -> variable_declaration
+variable_declaration -> INTEGER_DATATYPE IDENTIFIER SEMICOLON
+statement -> variable_declaration
+variable_declaration -> INTEGER_DATATYPE IDENTIFIER SEMICOLON
+statement -> variable_declaration
+factor -> NUM
+term -> factor
+numeric_expression -> term
+variable_assignment -> IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+factor -> NUM
+term -> factor
+numeric_expression -> term
+variable_assignment -> IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+factor -> NUM
+term -> factor
+numeric_expression -> term
+variable_declaration -> INTEGER_DATATYPE IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+relational_expression -> LESS_THAN
+factor -> IDENTIFIER
+term -> factor
+numeric_expression -> term
+add_operator -> PLUS
+factor -> IDENTIFIER
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+variable_assignment -> IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+factor -> IDENTIFIER
+term -> factor
+numeric_expression -> term
+variable_assignment -> IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+factor -> IDENTIFIER
+term -> factor
+numeric_expression -> term
+variable_assignment -> IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+factor -> IDENTIFIER
+term -> factor
+numeric_expression -> term
+add_operator -> PLUS
+factor -> NUM
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+variable_assignment -> IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+statements -> epsilon
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+while_statement -> WHILE THIS COLON L_PARENTHESIS IDENTIFIER relational_expression IDENTIFIER R_PARENTHESIS L_CURLY statements R_CURLY
+statement -> while_statement
+return_statement -> RETURN IDENTIFIER SEMICOLON
+statement -> return_statement
+statements -> epsilon
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+function -> IDENTIFIER COLON L_BRACKET INTEGER_DATATYPE IDENTIFIER R_BRACKET RETURN_TYPE_ARROW INTEGER_DATATYPE L_CURLY statements R_CURLY
+functions -> epsilon
+functions -> function functions
+program -> functions

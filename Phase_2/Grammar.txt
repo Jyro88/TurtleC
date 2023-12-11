@@ -1,0 +1,77 @@
+program --> functions
+
+functions --> 	function functions | ε
+		
+function --> IDENTIFIER COLON L_BRACKET INTEGER_DATATYPE IDENTIFIER R_BRACKET RETURN_TYPE_ARROW INTEGER_DATATYPE L_CURLY statements R_CURLY
+
+statements --> statement statements | ε
+			 
+statement --> numeric_expression 
+        | read
+        | write
+        | break
+        | assignment_statement
+        | variable_assignment
+        | variable_declaration
+        | array_declaration
+        | while_statement
+        | return_statement
+        | if_then_else_statement
+        | single_comment
+        | multi_line_comment
+
+break --> TERMINATE SEMICOLON
+
+read --> IDENTIFIER ASSIGNMENT READ L_PARENTHESIS IDENTIFIER R_PARENTHESIS
+
+write --> WRITE L_PARENTHESIS IDENTIFIER COMMA IDENTIFIER R_PARENTHESIS
+
+add_operator --> PLUS | MINUS 
+			
+mult_operator --> DIVIDE | TIMES 
+
+term --> term mult_operator factor 
+        | factor 
+
+factor --> L_PARENTHESIS numeric_expression R_PARENTHESIS
+        | NUM
+        | IDENTIFIER
+
+numeric_expression --> numeric_expression add_operator term
+		| term 
+
+assignment_statement --> variable_declaration SEMICOLON
+		| variable_assignment SEMICOLON
+			
+variable_declaration --> INTEGER_DATATYPE IDENTIFIER ASSIGNMENT numeric_expression
+		| INTEGER_DATATYPE IDENTIFIER SEMICOLON
+
+variable_assignment --> IDENTIFIER ASSIGNMENT numeric_expression
+
+array_declaration --> INTEGER_ARRAY_DATATYPE NUM IDENTIFIER SEMICOLON
+
+relational_expression --> LESS_THAN
+        | GREATER_THAN
+        | LESS_THAN_EQUAL
+        | GREATER_THAN_EQUAL
+
+while_statement --> WHILE THIS COLON L_PARENTHESIS IDENTIFIER relational_expression IDENTIFIER R_PARENTHESIS L_CURLY statements R_CURLY
+        | WHILE THIS COLON L_PARENTHESIS IDENTIFIER R_PARENTHESIS L_CURLY statements R_CURLY
+
+return_statement --> RETURN IDENTIFIER SEMICOLON
+
+if_then_else_statement --> if_statement
+        |
+        if_statement else_statement
+        |
+        if_statement elif_statement else_statement
+
+if_statement --> IF L_PARENTHESIS IDENTIFIER relational_expression IDENTIFIER R_PARENTHESIS L_CURLY statements R_CURLY
+
+else_statement --> ELSE L_CURLY statements R_CURLY
+
+elif_statement --> ELIF L_PARENTHESIS IDENTIFIER relational_expression IDENTIFIER R_PARENTHESIS L_CURLY statements R_CURLY
+
+single_comment --> COMMENT %prec VALID_CHAR
+
+

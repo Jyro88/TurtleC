@@ -1,0 +1,4 @@
+func test
+ret 1
+endfunc
+Error: On line 4, column 2: Error: No 'main' function defined. 

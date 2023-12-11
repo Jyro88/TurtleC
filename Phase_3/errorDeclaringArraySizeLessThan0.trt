@@ -1,0 +1,7 @@
+main : [] {
+    
+    tInt arrayOf_ 0 nums
+  
+
+
+}

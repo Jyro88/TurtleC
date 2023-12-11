@@ -1,0 +1,12 @@
+main : [] {
+    
+    tInt arrayOf_ 10 nums
+    tInt index10
+
+    index10 is nums[10]
+
+
+
+
+    write(index10)
+}

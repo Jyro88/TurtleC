@@ -1,0 +1,20 @@
+main : [] {
+    tInt a
+    tInt b
+    tInt c
+    
+    a is 1
+    b is 2
+    c is 3
+
+    if (a /eq 2) {
+        write(a)
+    }
+    elif (b /eq 2) {
+        write(b)
+    }
+    else {
+        write(c)
+    }
+
+}

@@ -1,0 +1,24 @@
+relational_expression -> LESS_THAN
+factor -> NUM
+term -> factor
+numeric_expression -> term
+variable_assignment -> IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+statements -> epsilon
+statements -> statement statements
+if_statement -> IF L_PARENTHESIS IDENTIFIER relational_expression IDENTIFIER R_PARENTHESIS L_CURLY statements R_CURLY
+factor -> NUM
+term -> factor
+numeric_expression -> term
+variable_assignment -> IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+statements -> epsilon
+statements -> statement statements
+else_statement -> ELSE L_CURLY statements R_CURLY
+if_then_else_statement -> if_else_statement
+statement -> if_then_else_statement
+statements -> epsilon
+statements -> statement statements
+Error: On line 11, column 5: syntax error, unexpected ELSE, expecting R_CURLY 

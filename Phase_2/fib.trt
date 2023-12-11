@@ -1,0 +1,20 @@
+fib : [tInt n] -> tInt {
+
+tInt x;
+tInt y;
+tInt result;
+
+x is 0;
+y is 1;
+
+tInt currNum is 0;
+
+while this: (currNum /lt n) {    
+    result is x /p y;
+    x is y;
+    y is result;
+    currNum is currNum /p 1;
+}
+
+output result;
+}

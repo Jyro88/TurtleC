@@ -1,0 +1,38 @@
+func sum
+. p1
+= p1, $0
+. p2
+ = p2, $1
+ . p3
+ = p3, $2
+ . res
+. _temp0
++ _temp0, p1, p2
+. _temp1
++ _temp1, _temp0, p3
+= res, _temp1
+ret res
+endfunc
+func main
+. a
+.< a
+. b
+.< b
+. c
+.< c
+. d
+. _temp2
+= _temp2, a
+param _temp2
+. _temp3
+= _temp3, b
+param _temp3
+. _temp4
+= _temp4, c
+param _temp4
+. _temp5
+call sum, _temp5
+= d, _temp5
+.> d
+.> a
+Error: On line 22, column 11: Duplicate identifier 'a' found. 

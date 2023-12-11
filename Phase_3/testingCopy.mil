@@ -1,0 +1,11 @@
+func main
+. complexThing
+. _temp0
++ _temp0, 5, 6
+. _temp1
+- _temp1, _temp0, 7
+. _temp2
+/ _temp2, _temp1, 2
+= complexThing, _temp2
+.> complexThing
+endfunc

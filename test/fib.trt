@@ -1,0 +1,29 @@
+Calculating the fibonacci number
+
+
+fib : (tInt n) -> tInt {
+
+	~ Integer scalar variables
+tInt x;
+tInt y;
+tInt result;
+
+~ Assignment statements
+x is 0;
+y is 1;
+
+tInt currNum is 0
+
+~ While loop to generate the Fibonacci sequence
+while this: (currNum \lt n) {    
+
+ ~ Compute the next Fibonacci number
+    result is x \plus y;
+    
+    ~ Update variables for the next iteration
+    x is y;
+    y is result;
+}
+
+output result;
+}

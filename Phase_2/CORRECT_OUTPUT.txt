@@ -1,0 +1,160 @@
+factor -> NUM
+term -> factor
+numeric_expression -> term
+add_operator -> PLUS
+factor -> NUM
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+add_operator -> MINUS
+factor -> NUM
+term -> factor
+numeric_expression -> term
+add_operator -> MINUS
+factor -> NUM
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+factor -> L_PARENTHESIS numeric_expression R_PARENTHESIS
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+factor -> L_PARENTHESIS numeric_expression R_PARENTHESIS
+term -> factor
+numeric_expression -> term
+statement -> numeric_expression
+read -> IDENTIFIER EQUIVALENT READ L_PARENTHESIS IDENTIFIER R_PARENTHESIS
+statement -> read
+write -> WRITE L_PARENTHESIS IDENTIFIER COMMA IDENTIFIER R_PARENTHESIS
+statement -> write
+break -> TERMINATE;
+statement -> break
+factor -> NUM
+term -> factor
+numeric_expression -> term
+variable_declaration -> INTEGER_DATATYPE IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+factor -> NUM
+term -> factor
+numeric_expression -> term
+variable_assignment -> IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+factor -> NUM
+term -> factor
+numeric_expression -> term
+add_operator -> PLUS
+factor -> NUM
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+factor -> L_PARENTHESIS numeric_expression R_PARENTHESIS
+term -> factor
+mult_operator -> DIVIDE
+factor -> NUM
+term -> term mult_operator factor
+numeric_expression -> term
+variable_declaration -> INTEGER_DATATYPE IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+array_declaration ->  INTEGER_ARRAY_DATATYPE NUM IDENTIFIER SEMICOLON
+statement -> array_declaration
+relational_expression -> LESS_THAN
+relational_expression -> LESS_THAN
+factor -> NUM
+term -> factor
+numeric_expression -> term
+add_operator -> PLUS
+factor -> NUM
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+factor -> L_PARENTHESIS numeric_expression R_PARENTHESIS
+term -> factor
+mult_operator -> DIVIDE
+factor -> NUM
+term -> term mult_operator factor
+numeric_expression -> term
+variable_declaration -> INTEGER_DATATYPE IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+array_declaration ->  INTEGER_ARRAY_DATATYPE NUM IDENTIFIER SEMICOLON
+statement -> array_declaration
+statements -> epsilon
+statements -> statement statements
+statements -> statement statements
+if_statement -> IF L_PARENTHESIS IDENTIFIER relational_expression IDENTIFIER R_PARENTHESIS L_CURLY statements R_CURLY
+if_then_else_statement -> if_statement
+statement -> if_then_else_statement
+factor -> NUM
+term -> factor
+numeric_expression -> term
+add_operator -> PLUS
+factor -> NUM
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+factor -> L_PARENTHESIS numeric_expression R_PARENTHESIS
+term -> factor
+mult_operator -> DIVIDE
+factor -> NUM
+term -> term mult_operator factor
+numeric_expression -> term
+variable_declaration -> INTEGER_DATATYPE IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+array_declaration ->  INTEGER_ARRAY_DATATYPE NUM IDENTIFIER SEMICOLON
+statement -> array_declaration
+statements -> epsilon
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+if_statement -> IF L_PARENTHESIS IDENTIFIER relational_expression IDENTIFIER R_PARENTHESIS L_CURLY statements R_CURLY
+if_then_else_statement -> if_statement
+statement -> if_then_else_statement
+relational_expression -> LESS_THAN
+factor -> NUM
+term -> factor
+numeric_expression -> term
+add_operator -> PLUS
+factor -> NUM
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+factor -> L_PARENTHESIS numeric_expression R_PARENTHESIS
+term -> factor
+mult_operator -> DIVIDE
+factor -> NUM
+term -> term mult_operator factor
+numeric_expression -> term
+variable_declaration -> INTEGER_DATATYPE IDENTIFIER ASSIGNMENT numeric_expression
+assignment_statement -> variable_declaration SEMICOLON
+statement -> assignment_statement
+array_declaration ->  INTEGER_ARRAY_DATATYPE NUM IDENTIFIER SEMICOLON
+statement -> array_declaration
+statements -> epsilon
+statements -> statement statements
+statements -> statement statements
+if_statement -> IF L_PARENTHESIS IDENTIFIER relational_expression IDENTIFIER R_PARENTHESIS L_CURLY statements R_CURLY
+if_then_else_statement -> if_statement
+statement -> if_then_else_statement
+single_comment -> COMMENT VALID_CHAR
+statement -> comment
+factor -> IDENTIFIER
+term -> factor
+numeric_expression -> term
+statement -> numeric_expression
+array_declaration ->  INTEGER_ARRAY_DATATYPE NUM IDENTIFIER SEMICOLON
+statement -> array_declaration
+statements -> epsilon
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+statements -> statement statements
+function -> IDENTIFIER COLON L_BRACKET INTEGER_DATATYPE IDENTIFIER R_BRACKET RETURN_TYPE_ARROW INTEGER_DATATYPE L_CURLY statements R_CURLY
+functions -> epsilon
+functions -> function functions
+program -> functions

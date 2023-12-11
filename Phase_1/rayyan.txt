@@ -1,0 +1,12 @@
+Assignment statements
+x is 5;
+
+
+One-dimensional arrays of integers
+tInt_array_of_5 is [0,0,0,0,0]
+
+Arithmetic operators (e.g., “+”, “-”, “*”, “/”)
+X /p Y
+X /m Y
+X /t Y
+X /d Y

@@ -1,0 +1,21 @@
+main : [] {
+    
+    tInt arrayOf_ 10 nums
+    
+    tInt index8
+    tInt elementAtIndex8
+
+    
+    
+    index8 is 7
+
+    nums[index8] is 5
+    elementAtIndex8 is nums[7]
+     write(elementAtIndex8)
+    nums[7] is 6
+    elementAtIndex8 is nums[index8]
+
+    
+
+    write(elementAtIndex8)
+}

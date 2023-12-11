@@ -1,0 +1,25 @@
+factor -> NUM
+term -> factor
+numeric_expression -> term
+add_operator -> PLUS
+factor -> NUM
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+add_operator -> MINUS
+factor -> NUM
+term -> factor
+numeric_expression -> term
+add_operator -> MINUS
+factor -> NUM
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+factor -> L_PARENTHESIS numeric_expression R_PARENTHESIS
+term -> factor
+numeric_expression -> numeric_expression add_operator term
+factor -> L_PARENTHESIS numeric_expression R_PARENTHESIS
+term -> factor
+numeric_expression -> term
+statement -> numeric_expression
+statements -> epsilon
+statements -> statement statements
+Error: On line 2, column 26: syntax error, unexpected R_PARENTHESIS, expecting R_CURLY 

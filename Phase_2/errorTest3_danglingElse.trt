@@ -1,0 +1,15 @@
+sum : [tInt sum] -> tInt {
+
+
+    if(a /lt b) {
+        num is 5;
+    }
+    else {
+        num is 6;
+    }
+
+    else {
+        num is 1;
+    }
+
+}

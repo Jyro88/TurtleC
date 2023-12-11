@@ -1,0 +1,89 @@
+func bubSort
+. n
+= n, $0
+.[] a, 5
+[]= a, 0, 3
+[]= a, 1, 6
+[]= a, 2, 1
+[]= a, 3, 3
+[]= a, 4, 0
+. i
+. j
+. swapped
+. temp
+= i, 0
+. nMinus1
+. _temp0
+- _temp0, n, 1
+= nMinus1, _temp0
+: _label0
+= swapped, 0
+= j, 0
+. nMinusIMinus1
+. _temp1
+- _temp1, n, i
+. _temp2
+- _temp2, _temp1, 1
+= nMinusIMinus1, _temp2
+: _label1
+. arrayAtJ
+. _temp3
+=[] _temp3, a, j
+= arrayAtJ, _temp3
+. arrayAtJPlus1
+. jPlus1
+. _temp4
++ _temp4, j, 1
+= jPlus1, _temp4
+. _temp5
+=[] _temp5, a, jPlus1
+= arrayAtJPlus1, _temp5
+. _temp6
+> _temp6, arrayAtJ, arrayAtJPlus1
+! _temp6, _temp6
+?:= _label2, _temp6
+. _temp7
+=[] _temp7, a, j
+= temp, _temp7
+. _temp8
+=[] _temp8, a, jPlus1
+[]= a, j, _temp8
+[]= a, jPlus1, temp
+= swapped, 1
+: _label2
+. _temp9
++ _temp9, j, 1
+= j, _temp9
+. _temp10
+< _temp10, j, nMinusIMinus1
+?:= _label1, _temp10
+. _temp11
++ _temp11, i, 1
+= i, _temp11
+. _temp12
+< _temp12, i, nMinus1
+?:= _label0, _temp12
+= i, 0
+: _label3
+. eachElement
+. _temp13
+=[] _temp13, a, i
+= eachElement, _temp13
+.> eachElement
+. _temp14
++ _temp14, i, 1
+= i, _temp14
+. _temp15
+< _temp15, i, n
+?:= _label3, _temp15
+ret 1
+endfunc
+func main
+. n
+= n, 5
+. _temp16
+= _temp16, n
+param _temp16
+. _temp17
+call bubSort, _temp17
+endfunc

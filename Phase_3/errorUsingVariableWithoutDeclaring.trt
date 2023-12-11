@@ -1,0 +1,9 @@
+sum : [parameter1] {
+    write (parameter1)
+    output parameter1
+}
+
+main : [] {
+    a is (/RAYYANCALL sum(5,8))
+    write (a)
+}

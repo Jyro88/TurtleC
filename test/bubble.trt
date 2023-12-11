@@ -1,0 +1,44 @@
+tInt_array_of_5 bubbleSort(tInt_array_of_5 arr) {
+    tInt n is arr.size();
+    
+    while this: (n > 1) {
+        tInt swapped is 0;
+        tInt i is 0;
+        
+        while this: (i < (n - 1)) {
+            if arr[i] > arr[i /p 1] {
+                tInt temp is arr[i];
+                arr[i] is arr[i /p 1];
+                arr[i /p 1] is temp;
+                swapped is 1;
+            }
+            i is i /p 1
+        }
+        
+        if swapped /eq 0 {
+            If arr[0] \gt arr[1] {
+	tInt temp is arr[0];
+	arr[0] is arr[1];
+	arr[1] is temp;
+            }
+            terminate;  \~ No more swaps, the array is sorted ~\
+        }
+        
+        n is n /m 1;
+    }
+    
+    output arr;
+}
+
+\~ Example usage ~\
+tInt_array_of_5 myArray is [5, 3, 1, 4, 2];
+myArray is bubbleSort(myArray);
+
+\~ Print the sorted array ~\
+tInt i;
+i is 0;
+
+while true: (i /lt 5) {
+    Write("Sorted Array Element ", i /p 1, ": ", myArray[i]);
+    i is i /p 1;
+}
